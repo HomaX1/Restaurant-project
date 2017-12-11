@@ -1,0 +1,11 @@
+/*helpers*/
+@import "helpers/normalize/normalize";
+@import "helpers/slick/slick";
+/*@import "helpers/slick/slick-theme";*/
+/*@import "helpers/fontAwesome/font-awesome";*/
+
+/*modules*/
+@import "base/common";
+@import "base/variables";
+@import "modules/header/header";
+@import "modules/footer/footer";
