@@ -2,12 +2,15 @@
   background-color: rgba(0, 0, 0, .75);
 }
 
-.header-wrap {
+.container {
   max-width: 1170px;
+  margin: 0 auto;
+}
+
+.header-wrap {
   display: flex;
   justify-content: space-between;
   padding: 30px 10px;
-  margin: 0 auto;
 }
 
 .main-header {
@@ -20,16 +23,16 @@
   &__icon-menu {
     display: none;
   }
-
-  &__icon-cancel {
-    display: none;
-  }
 }
 
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &__icon-cancel {
+    display: none;
+  }
 }
 
 .navigation-item {
@@ -74,7 +77,6 @@
   background-color: $WHITE;
   text-align: center;
   padding: 0 10px;
-  transition: opacity .3s ease-out;
 
   &__title {
     text-transform: capitalize;
@@ -91,6 +93,7 @@
     font-size: 15px;
     padding: 10px 0;
     color: $BLACK;
+    transition: color .1s;
 
     &:hover {
       color: $ANZAC;
@@ -114,7 +117,6 @@
     overflow: hidden;
 
     &::placeholder {
-      font: 18px $LATO;
       color: $ANZAC;
     }
 
@@ -180,18 +182,54 @@
 
   .navigation {
     display: none;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
+    align-items: flex-end;
+    background-color: $BLACK;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    overflow: hidden;
+    overflow-y: auto;
+
+    &__icon-cancel {
+      display: inline-block;
+      color: $ANZAC;
+      font-size: 30px;
+      margin: 40px 40px 30px 0;
+    }
   }
 
   .navigation-item {
-    margin-bottom: 10px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    margin: 10px 40px 10px 0;
 
     &::after {
       display: none;
+    }
+  }
+
+  .inside-menu {
+    display: none;
+    text-align: right;
+    position: static;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    padding: 0;
+
+    &__title {
+      display: none;
+    }
+
+    &__link {
+      color: $DUSTYGRAY;
+      display: block;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

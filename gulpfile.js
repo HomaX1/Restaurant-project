@@ -74,8 +74,10 @@ gulp.task('templates', function () {
 //js
 gulp.task('js', function () {
     gulp.src('./js/main/modules/*.js')
+        .pipe(uglify().on('error', function(e){
+            console.log(e);
+        }))
         .pipe(concat('main.min.js'))
-        .pipe(uglify())
         .pipe(gulp.dest('./js/main'))
         .pipe(connect.reload());
 
