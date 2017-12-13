@@ -1,14 +1,36 @@
-<a class="header-link" href="#">
-    <img class="header-link__logo" src="#" alt="Logo">
-</a>
-<nav class="footer-nav">
-    <a class="footer-nav__item" href="#">menu</a>
-    <a class="footer-nav__item" href="#">reservations</a>
-    <a class="footer-nav__item" href="#">gallery</a>
-    <a class="footer-nav__item" href="#">about us</a>
-    <a class="footer-nav__item" href="#">Twitter</a>
+<a class="header__logo" href="#">olaf</a>
+<nav class="navigation">
+    <i class="navigation__icon-cancel"></i>
+    <div class="navigation-item">
+        <a class="navigation-item__link" href="#">home</a>
+    </div>
+    <div class="navigation-item">
+        <a class="navigation-item__link" href="#">menu</a>
+        <nav class="inside-menu">
+            <span class="inside-menu__title">menu</span>
+            <a class="inside-menu__link" href="#">dishes</a>
+            <a class="inside-menu__link" href="#">soups</a>
+            <a class="inside-menu__link" href="#">salads</a>
+            <a class="inside-menu__link" href="#">desserts</a>
+            <a class="inside-menu__link" href="#">beverages</a>
+        </nav>
+    </div>
+    <div class="navigation-item">
+        <a class="navigation-item__link" href="#">reservations</a>
+    </div>
+    <div class="navigation-item">
+        <a class="navigation-item__link" href="#">gallery</a>
+    </div>
+    <div class="navigation-item">
+        <a class="navigation-item__link" href="#">about us</a>
+    </div>
+    <div class="navigation-item">
+        <a class="navigation-item__link" href="#">contacts</a>
+    </div>
 </nav>
 <form class="search" action="#" method="get">
-    <button class="search__icon" type="button"></button>
     <input class="search__input" type="text" name="search" placeholder="Search">
+    <button class="search-button" type="button">
+        <i class="search-button__icon fa fa-search" aria-hidden="true"></i>
+    </button>
 </form>

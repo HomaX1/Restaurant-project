@@ -2,3 +2,135 @@
   max-width: 1170px;
   margin: 0 auto;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $BLACK;
+  opacity: .75;
+  padding: 30px 0;
+
+  &__logo {
+    text-transform: uppercase;
+    font: 36px $YESEVAONE;
+    color: $ANZAC;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-item {
+  text-transform: capitalize;
+  display: inline-block;
+  position: relative;
+
+  &__link {
+    font: bold 21px $GENTIUM;
+    color: $WHITE;
+    transition: color .1s;
+
+    &:hover {
+      color: $ANZAC;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 15px;
+    background-color: $WHITE;
+    margin: 0 15px;
+    vertical-align: middle;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
+
+.inside-menu {
+  display: none;
+  opacity: 1;
+  width: auto;
+  position: absolute;
+  top: -20px;
+  left: -16px;
+  font-family: $GENTIUM;
+  font-weight: 700;
+  background-color: $WHITE;
+  text-align: center;
+  padding: 0 10px;
+  transition: opacity .3s ease-out;
+
+  &__title {
+    text-transform: capitalize;
+    font-size: 21px;
+    color: $ANZAC;
+    display: inline-block;
+    border-bottom: 1px solid $ANZAC;
+    padding: 20px 5px 10px;
+  }
+
+  &__link {
+    display: block;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 10px 0;
+    color: $BLACK;
+
+    &:hover {
+      color: $ANZAC;
+    }
+  }
+}
+
+.search {
+  display: flex;
+  align-self: center;
+  border-bottom: 2px solid $ANZAC;
+  font: 18px $LATO;
+  padding-bottom: 4px;
+
+  &__input {
+    width: 145px;
+    background-color: transparent;
+    font: 18px $LATO;
+    color: $ANZAC;
+    border: none;
+    overflow: hidden;
+
+    &::placeholder {
+      font: 18px $LATO;
+      color: $ANZAC;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+
+  &__icon {
+    display: inline-block;
+    font-size: 20px;
+    color: $ANZAC;
+    transition: opacity .1s;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
