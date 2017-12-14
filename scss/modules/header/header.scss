@@ -85,12 +85,13 @@
     display: inline-block;
     border-bottom: 1px solid $ANZAC;
     padding: 20px 5px 10px;
+    cursor: pointer;
   }
 
   &__link {
     display: block;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 16px;
     padding: 10px 0;
     color: $BLACK;
     transition: color .1s;
@@ -139,10 +140,10 @@
     &:hover {
       opacity: .7;
     }
+  }
 
-    &:focus {
-      outline: none;
-    }
+  &:focus {
+    outline: none;
   }
 }
 
@@ -229,6 +230,10 @@
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+      &:hover {
+        color: $DUSTYGRAY;
       }
     }
   }

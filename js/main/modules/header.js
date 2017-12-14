@@ -16,6 +16,7 @@ $(function () {
     };
 
     var closeMenu = function () {
+        insideMenu.hide();
         navigation.fadeOut(function () {
             mainHeader.after(navigation);
             $(window).resize(function(){
