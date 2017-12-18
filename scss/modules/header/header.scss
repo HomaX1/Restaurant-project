@@ -43,7 +43,7 @@
   &__link {
     font: bold 21px $GENTIUM;
     color: $WHITE;
-    transition: color .1s;
+    transition: color .2s;
 
     &:hover, &:active {
       color: $ANZAC;
@@ -77,6 +77,7 @@
   background-color: $WHITE;
   text-align: center;
   padding: 0 10px;
+  z-index: 2;
 
   &__title {
     text-transform: capitalize;
@@ -94,7 +95,7 @@
     font-size: 16px;
     padding: 10px 0;
     color: $BLACK;
-    transition: color .1s;
+    transition: color .2s;
 
     &:hover {
       color: $ANZAC;
@@ -135,10 +136,10 @@
     display: inline-block;
     font-size: 20px;
     color: $ANZAC;
-    transition: opacity .1s;
+    transition: color .2s;
 
     &:hover {
-      opacity: .7;
+      color: $WHITE;
     }
   }
 
@@ -188,7 +189,7 @@
     flex-direction: column;
     align-items: flex-end;
     background-color: $BLACK;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 2;

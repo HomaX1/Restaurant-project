@@ -1,5 +1,6 @@
 (function () {
     header.innerHTML = MyApp.templates.header();
+    footer.innerHTML = MyApp.templates.footer();
 
 	/*var name = 'Vasia';
 	alert(name);

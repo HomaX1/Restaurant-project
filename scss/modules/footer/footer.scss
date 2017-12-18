@@ -1,0 +1,99 @@
+.footer {
+  background-color: rgba(0, 0, 0, .75);
+}
+
+.footer-wrap {
+  padding: 30px 10px;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footer-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.footer-contacts {
+  text-align: center;
+  font: 18px $LATO;
+
+  & span {
+    color: $ANZAC;
+    margin-right: 5px;
+  }
+}
+
+.email {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.phone__link, .email__link, .copyright__text {
+  color: $ANZAC;
+}
+
+.phone__link, .email__link {
+  transition: color .2s;
+
+  &:hover {
+    color: $WHITE;
+  }
+}
+
+.social-networks-link {
+  &__icon {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    background-color: $ANZAC;
+    color: $BLACK;
+    border-radius: 50%;
+    line-height: 30px;
+    margin-right: 10px;
+    transition: background-color .2s;
+
+    &:hover {
+      background-color: $WHITE;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.copyright {
+  text-align: center;
+
+  &__text {
+    font: 16px $LATO;
+  }
+}
+
+
+@media (max-width: 991px) {
+
+  .footer-info {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .footer-navigation {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navigation-item {
+    &_margin {
+      margin-right: 0;
+    }
+  }
+}
