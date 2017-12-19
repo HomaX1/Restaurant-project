@@ -1,5 +1,8 @@
 .header {
+  width: 100%;
   background-color: rgba(0, 0, 0, .75);
+  position: absolute;
+  z-index: 3;
 }
 
 .container {
@@ -163,6 +166,11 @@
 
 
 @media (max-width: 767px) {
+
+  .header {
+    position: static;
+    z-index: 0;
+  }
 
   .header-wrap {
     flex-direction: column;

@@ -7,25 +7,29 @@ $(function () {
         navigation = $('.navigation'),
         navItem = $('.navigation-item'),
         insideMenu = $('.inside-menu'),
-        mainHeader = $('.main-header');
+        mainHeader = $('.main-header'),
+        header = $('.header');
 
+
+    $(window).resize(function(){
+        if (document.documentElement.clientWidth >= 768) {
+            header.css('position', 'absolute');
+            navigation.css('display', 'flex');
+        }else {
+            header.css('position', 'static');
+            navigation.css('display', 'none');
+        }
+    });
 
     var showMenu = function () {
         $('body').append(navigation);
-        navigation.fadeIn().css({'display': 'flex'});
+        navigation.fadeIn().css('display', 'flex');
     };
 
     var closeMenu = function () {
         insideMenu.hide();
         navigation.fadeOut(function () {
             mainHeader.after(navigation);
-            $(window).resize(function(){
-                if (document.documentElement.clientWidth >= 768) {
-                    navigation.css({'display': 'flex'});
-                }else {
-                    navigation.css({'display': 'none'});
-                }
-            });
         });
     };
 
