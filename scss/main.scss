@@ -2,7 +2,6 @@
 @import "helpers/normalize/normalize";
 @import "helpers/slick/slick";
 @import "helpers/fontAwesome/font-awesome";
-/*@import "helpers/slick/slick-theme";*/
 
 /*modules*/
 @import "base/common";
@@ -11,4 +10,8 @@
 @import "modules/header/header";
 @import "modules/footer/footer";
 @import "modules/home/home";
+@import "modules/menu/menu";
+@import "modules/reservation/reservation";
+@import "modules/gallery/gallery";
+@import "modules/contacts/contacts";
 

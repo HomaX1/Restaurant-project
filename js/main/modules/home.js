@@ -1,7 +1,5 @@
-$(function () {
-
-    function slider() {
-
+var homeFunctions = {
+    slider: function () {
         $('.fade').slick({
             /*autoplay: true,
             autoplaySpeed: 5000,*/
@@ -11,18 +9,15 @@ $(function () {
             fade: true,
             cssEase: 'linear'
         });
-
-    }
-    slider();
-
-    function buttonsStyle() {
-
+    },
+    arrowsStyle: function () {
         $('.slick-arrow').text('');
         $('.slick-prev').html('<i class="arrow fa fa-chevron-left" aria-hidden="true"></i>');
         $('.slick-next').html('<i class="arrow fa fa-chevron-right" aria-hidden="true"></i>');
-
+    },
+    homeRender: function () {
+        this.slider();
+        this.arrowsStyle();
     }
-    buttonsStyle();
+};
 
-
-});
