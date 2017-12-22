@@ -11,8 +11,9 @@
     footer.innerHTML = MyApp.templates.footer();
     home.innerHTML = MyApp.templates.home();
 
-    homeFunctions.homeRender();
     headerFunctions.headerRender();
+    homeFunctions.homeRender();
+
 
     function renderPage(tag, template) {
         $(content).children().empty();
