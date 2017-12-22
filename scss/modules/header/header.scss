@@ -21,6 +21,7 @@
     text-transform: uppercase;
     font: 36px $YESEVAONE;
     color: $ANZAC;
+    cursor: pointer;
   }
 
   &__icon-menu {
@@ -47,6 +48,7 @@
     font: bold 21px $GENTIUM;
     color: $WHITE;
     transition: color .2s;
+    cursor: pointer;
 
     &:hover, &:active {
       color: $ANZAC;

@@ -1,54 +1,58 @@
 (function () {
     'use strict';
 
-    var content = '#content';
+    var content = '#content',
+        locationObj = window.location.href;
 
-    /*,locationObj = document.location;
-       var hash = window.location/!*.hash.substr(1)*!/;*
-    /*console.log(hash.href);*/
 
     header.innerHTML = MyApp.templates.header();
     footer.innerHTML = MyApp.templates.footer();
     home.innerHTML = MyApp.templates.home();
 
+
     headerFunctions.headerRender();
     homeFunctions.homeRender();
 
 
-    function renderPage(tag, template) {
-        $(content).children().empty();
-        tag.innerHTML = template();
+    var mainFunctions = {
+        renderPage: function(tag, template) {
+            $(content).children().empty();
+            tag.innerHTML = template();
+        },
+        pageNavigation: function() {
 
-        /*   window.location.hash = '#' + $(tag).attr('id');*/
-    }
+            $('.navigation, .footer-navigation, .main-header__logo').click(function (event) {
 
-    function pageNavigation() {
+                var pageId = event.target.id;
 
-        $('.navigation, .footer-navigation').click(function (event) {
+                switch (pageId) {
+                    case 'home-link':
+                    case 'logo-link':
+                        mainFunctions.renderPage(home, MyApp.templates.home);
+                        homeFunctions.homeRender();
+                        locationObj = '#';
+                        break;
+                    case 'menu-link':
+                        mainFunctions.renderPage(menu, MyApp.templates.menu);
+                        locationObj = '#menu';
+                        break;
+                    case 'reservation-link':
+                        mainFunctions.renderPage(reservation, MyApp.templates.reservation);
+                        locationObj = '#reservation';
+                        break;
+                    case 'gallery-link':
+                        mainFunctions.renderPage(gallery, MyApp.templates.gallery);
+                        locationObj = '#gallery';
+                        break;
+                    case 'contacts-link':
+                        mainFunctions.renderPage(contacts, MyApp.templates.contacts);
+                        locationObj = '#contacts';
+                        break;
+                }
+            });
+        }
+    };
 
-            var pageId = event.target.id;
-
-            switch (pageId) {
-                case 'home-link':
-                    renderPage(home, MyApp.templates.home);
-                    homeFunctions.homeRender();
-                    break;
-                case 'menu-link':
-                    renderPage(menu, MyApp.templates.menu);
-                    break;
-                case 'reservation-link':
-                    renderPage(reservation, MyApp.templates.reservation);
-                    break;
-                case 'gallery-link':
-                    renderPage(gallery, MyApp.templates.gallery);
-                    break;
-                case 'contacts-link':
-                    renderPage(contacts, MyApp.templates.contacts);
-                    break;
-            }
-        });
-    }
-
-    pageNavigation();
+    mainFunctions.pageNavigation();
 
 })();
