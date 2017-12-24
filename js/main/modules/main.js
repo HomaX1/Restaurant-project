@@ -2,6 +2,7 @@
     'use strict';
 
     var content = '#content',
+        arrayProducts =[],
         locationObj = window.location.href;
 
 
@@ -15,13 +16,17 @@
 
 
     var mainFunctions = {
-        renderPage: function(tag, template) {
+        renderPage: function(tag, template, resp) {
             $(content).children().empty();
-            tag.innerHTML = template();
+            if(resp) {
+                tag.innerHTML = template({menu: resp});
+            }else {
+                tag.innerHTML = template();
+            }
         },
         pageNavigation: function() {
 
-            $('.navigation, .footer-navigation, .main-header__logo').click(function (event) {
+            $('.navigation, .footer-navigation, .main-header__logo, .menu-icons').click(function (event) {
 
                 var pageId = event.target.id;
 
@@ -32,9 +37,33 @@
                         homeFunctions.homeRender();
                         locationObj = '#';
                         break;
+                    case 'all-link':
                     case 'menu-link':
-                        mainFunctions.renderPage(menu, MyApp.templates.menu);
-                        locationObj = '#menu';
+                        $.get('/menu.json', function (resp) {
+                            arrayProducts = resp;
+                            mainFunctions.renderPage(menu, MyApp.templates.menu, resp);
+                            locationObj = '#menu';
+                        });
+                        break;
+                    case 'dishes-link':
+                        mainFunctions.renderPage(reservation, MyApp.templates.menu, arrayProducts);
+                        locationObj = '#menu/dishes';
+                        break;
+                    case 'soups-link':
+                        mainFunctions.renderPage(reservation, MyApp.templates.menu, arrayProducts);
+                        locationObj = '#menu/soups';
+                        break;
+                    case 'salads-link':
+                        mainFunctions.renderPage(reservation, MyApp.templates.menu, arrayProducts);
+                        locationObj = '#menu/salads';
+                        break;
+                    case 'desserts-link':
+                        mainFunctions.renderPage(reservation, MyApp.templates.menu, arrayProducts);
+                        locationObj = '#menu/desserts';
+                        break;
+                    case 'beverages-link':
+                        mainFunctions.renderPage(reservation, MyApp.templates.menu, arrayProducts);
+                        locationObj = '#menu/beverages';
                         break;
                     case 'reservation-link':
                         mainFunctions.renderPage(reservation, MyApp.templates.reservation);

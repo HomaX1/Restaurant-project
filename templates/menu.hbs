@@ -1,1 +1,26 @@
-<p>It's a menu page!</p>
+<div class="container menu-wrap">
+    <h3 class="menu-wrap__title">Menu</h3>
+    <div class="menu-icons">
+        <a id="all-link" class="menu-icons__link " href="/#menu"></a>
+        <a id="dishes-link" class="menu-icons__link" href="/#menu/dishes"></a>
+        <a id="soups-link" class="menu-icons__link" href="/#menu/soups"></a>
+        <a id="salads-link" class="menu-icons__link" href="/#menu/salads"></a>
+        <a id="desserts-link" class="menu-icons__link" href="/#menu/desserts"></a>
+        <a id="beverages-link" class="menu-icons__link" href="/#menu/beverages"></a>
+    </div>
+    <div class="sorts">
+
+    </div>
+    <div class="products">
+        <div id="category" class="product">
+            {{#each menu}}
+            <img class="product__img" src="{{img}}" alt="">
+            <div class="product-info">
+                <h4 class="product-info__title">{{name}}</h4>
+                <p class="product-info__text">{{ingredients}}</p>
+                <span class="product-info__text-price">{{price}}</span>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
