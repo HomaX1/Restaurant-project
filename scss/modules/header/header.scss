@@ -112,13 +112,13 @@
   display: flex;
   align-self: center;
   border-bottom: 2px solid $ANZAC;
-  font: 18px $LATO;
+  font-size: 18px;
   padding-bottom: 4px;
 
   &__input {
     width: 145px;
     background-color: transparent;
-    font: 18px $LATO;
+    font-size: 18px;
     color: $ANZAC;
     border: none;
     overflow: hidden;

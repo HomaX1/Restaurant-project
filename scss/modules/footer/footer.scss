@@ -22,7 +22,7 @@
 
 .footer-contacts {
   text-align: center;
-  font: 18px $LATO;
+  font-size: 18px;
 
   & span {
     color: $ANZAC;
@@ -73,7 +73,7 @@
   text-align: center;
 
   &__text {
-    font: 16px $LATO;
+    font-size: 16px;
   }
 }
 

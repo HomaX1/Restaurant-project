@@ -9,18 +9,25 @@
         <a id="beverages" class="menu-icons__link menu-icons__link_beverages" href="/#menu/beverages"></a>
     </div>
     <div class="sorts">
-
+        <div class="sorts-info">
+            <span class="sorts-info__text">default</span>
+        <i class="sorts-info__icon fa fa-chevron-down" aria-hidden="true"></i>
+        </div>
+        <ul class="sorts-list">
+            <li class="sorts-list__item">from cheap to expensive</li>
+            <li class="sorts-list__item">from expensive to cheap</li>
+        </ul>
     </div>
     <div class="products">
         {{#each menu}}
-        <div id="{{category}}" class="product">
-            <img class="product__img" src="{{img}}" alt="">
-            <div class="product-info">
-                <h4 class="product-info__title">{{name}}</h4>
-                <p class="product-info__text">{{ingredients}}</p>
-                <span class="product-info__text-price">{{price}}</span>
+            <div id="{{category}}" class="product">
+                <img class="product__img" src="{{img}}" alt="">
+                <div class="product-info">
+                    <h4 class="product-info__title">{{name}}</h4>
+                    <p class="product-info__text">{{ingredients}}</p>
+                    <span class="product-info__text-price">{{price}}</span>
+                </div>
             </div>
-        </div>
         {{/each}}
     </div>
 </div>

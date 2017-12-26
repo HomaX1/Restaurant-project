@@ -35,7 +35,7 @@
                 }
             });
             mainFunctions.renderPage(menu, MyApp.templates.menu, filterResp);
-
+            menuFunctions.listShow(filterResp);
         },
         pageNavigation: function () {
 
@@ -90,7 +90,7 @@
             }));
         }
     };
-
     mainFunctions.pageNavigation();
+
 
 })();

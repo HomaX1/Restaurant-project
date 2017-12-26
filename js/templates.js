@@ -18,21 +18,21 @@ this["MyApp"]["templates"]["home"] = Handlebars.template({"compiler":[6,">= 2.0.
 this["MyApp"]["templates"]["menu"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "        <div id=\""
+  return "            <div id=\""
     + alias3(((helper = (helper = helpers.category || (depth0 != null ? depth0.category : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"category","hash":{},"data":data}) : helper)))
-    + "\" class=\"product\">\r\n            <img class=\"product__img\" src=\""
+    + "\" class=\"product\">\r\n                <img class=\"product__img\" src=\""
     + alias3(((helper = (helper = helpers.img || (depth0 != null ? depth0.img : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"img","hash":{},"data":data}) : helper)))
-    + "\" alt=\"\">\r\n            <div class=\"product-info\">\r\n                <h4 class=\"product-info__title\">"
+    + "\" alt=\"\">\r\n                <div class=\"product-info\">\r\n                    <h4 class=\"product-info__title\">"
     + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
-    + "</h4>\r\n                <p class=\"product-info__text\">"
+    + "</h4>\r\n                    <p class=\"product-info__text\">"
     + alias3(((helper = (helper = helpers.ingredients || (depth0 != null ? depth0.ingredients : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"ingredients","hash":{},"data":data}) : helper)))
-    + "</p>\r\n                <span class=\"product-info__text-price\">"
+    + "</p>\r\n                    <span class=\"product-info__text-price\">"
     + alias3(((helper = (helper = helpers.price || (depth0 != null ? depth0.price : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"price","hash":{},"data":data}) : helper)))
-    + "</span>\r\n            </div>\r\n        </div>\r\n";
+    + "</span>\r\n                </div>\r\n            </div>\r\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "<div class=\"container menu-wrap\">\r\n    <h3 class=\"menu-wrap__title\">Menu</h3>\r\n    <div class=\"menu-icons\">\r\n        <a id=\"menu-link\" class=\"menu-icons__link menu-icons__link_all\" href=\"/#menu\"></a>\r\n        <a id=\"dishes\" class=\"menu-icons__link menu-icons__link_dishes\" href=\"/#menu/dishes\"></a>\r\n        <a id=\"soups\" class=\"menu-icons__link menu-icons__link_soups\" href=\"/#menu/soups\"></a>\r\n        <a id=\"salads\" class=\"menu-icons__link menu-icons__link_salads\" href=\"/#menu/salads\"></a>\r\n        <a id=\"desserts\" class=\"menu-icons__link menu-icons__link_desserts\" href=\"/#menu/desserts\"></a>\r\n        <a id=\"beverages\" class=\"menu-icons__link menu-icons__link_beverages\" href=\"/#menu/beverages\"></a>\r\n    </div>\r\n    <div class=\"sorts\">\r\n\r\n    </div>\r\n    <div class=\"products\">\r\n"
+  return "<div class=\"container menu-wrap\">\r\n    <h3 class=\"menu-wrap__title\">Menu</h3>\r\n    <div class=\"menu-icons\">\r\n        <a id=\"menu-link\" class=\"menu-icons__link menu-icons__link_all\" href=\"/#menu\"></a>\r\n        <a id=\"dishes\" class=\"menu-icons__link menu-icons__link_dishes\" href=\"/#menu/dishes\"></a>\r\n        <a id=\"soups\" class=\"menu-icons__link menu-icons__link_soups\" href=\"/#menu/soups\"></a>\r\n        <a id=\"salads\" class=\"menu-icons__link menu-icons__link_salads\" href=\"/#menu/salads\"></a>\r\n        <a id=\"desserts\" class=\"menu-icons__link menu-icons__link_desserts\" href=\"/#menu/desserts\"></a>\r\n        <a id=\"beverages\" class=\"menu-icons__link menu-icons__link_beverages\" href=\"/#menu/beverages\"></a>\r\n    </div>\r\n    <div class=\"sorts\">\r\n        <div class=\"sorts-info\">\r\n            <span class=\"sorts-info__text\">default</span>\r\n        <i class=\"sorts-info__icon fa fa-chevron-down\" aria-hidden=\"true\"></i>\r\n        </div>\r\n        <ul class=\"sorts-list\">\r\n            <li class=\"sorts-list__item\">from cheap to expensive</li>\r\n            <li class=\"sorts-list__item\">from expensive to cheap</li>\r\n        </ul>\r\n    </div>\r\n    <div class=\"products\">\r\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.menu : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "    </div>\r\n</div>";
 },"useData":true});

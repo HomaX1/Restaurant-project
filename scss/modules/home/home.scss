@@ -76,7 +76,7 @@
     text-transform: uppercase;
     width: 230px;
     height: 60px;
-    font: 18px $LATO;
+    font-size: 18px;
     color: $WHITE;
     background-color: rgba(255, 255, 255, .25);
     border: 1px solid $WHITE;
@@ -132,7 +132,7 @@
   }
 
   &__text {
-    font: 16px $LATO;
+    font-size: 16px;
     color: $TUNDORA;
     margin-bottom: 50px;
     line-height: 1.75;
@@ -183,7 +183,7 @@
   }
 
   &__text {
-    font: 16px $LATO;
+    font-size: 16px;
     line-height: 1.75;
     margin-bottom: 70px;
   }
@@ -250,7 +250,7 @@
   }
 
   &__name {
-    font: 18px $LATO;
+    font-size: 18px;
   }
 }
 
@@ -260,7 +260,7 @@
   position: relative;
 
   &__text {
-    font: 22px $LATO;
+    font-size: 22px;
     line-height: 1.75;
   }
 
