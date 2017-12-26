@@ -1,26 +1,26 @@
 <div class="container menu-wrap">
     <h3 class="menu-wrap__title">Menu</h3>
     <div class="menu-icons">
-        <a id="all-link" class="menu-icons__link " href="/#menu"></a>
-        <a id="dishes-link" class="menu-icons__link" href="/#menu/dishes"></a>
-        <a id="soups-link" class="menu-icons__link" href="/#menu/soups"></a>
-        <a id="salads-link" class="menu-icons__link" href="/#menu/salads"></a>
-        <a id="desserts-link" class="menu-icons__link" href="/#menu/desserts"></a>
-        <a id="beverages-link" class="menu-icons__link" href="/#menu/beverages"></a>
+        <a id="menu-link" class="menu-icons__link menu-icons__link_all" href="/#menu"></a>
+        <a id="dishes" class="menu-icons__link menu-icons__link_dishes" href="/#menu/dishes"></a>
+        <a id="soups" class="menu-icons__link menu-icons__link_soups" href="/#menu/soups"></a>
+        <a id="salads" class="menu-icons__link menu-icons__link_salads" href="/#menu/salads"></a>
+        <a id="desserts" class="menu-icons__link menu-icons__link_desserts" href="/#menu/desserts"></a>
+        <a id="beverages" class="menu-icons__link menu-icons__link_beverages" href="/#menu/beverages"></a>
     </div>
     <div class="sorts">
 
     </div>
     <div class="products">
-        <div id="category" class="product">
-            {{#each menu}}
+        {{#each menu}}
+        <div id="{{category}}" class="product">
             <img class="product__img" src="{{img}}" alt="">
             <div class="product-info">
                 <h4 class="product-info__title">{{name}}</h4>
                 <p class="product-info__text">{{ingredients}}</p>
                 <span class="product-info__text-price">{{price}}</span>
             </div>
-            {{/each}}
         </div>
+        {{/each}}
     </div>
 </div>
