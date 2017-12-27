@@ -108,31 +108,32 @@
 
 .products {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  padding: 0 10px;
 }
 
 .product {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 35%;
-  height: 150px;
-  margin-bottom: 20px;
+  width: 30%;
+  margin-bottom: 30px;
   margin-right: 20px;
   overflow: hidden;
 
   &__img {
     width: 150px;
     height: 150px;
-    padding-right: 20px;
+    margin-bottom: 10px;
   }
 }
 
 .product-info {
   width: 240px;
   font-size: 14px;
-  text-align: left;
+  text-align: center;
   overflow: hidden;
 
 
@@ -140,5 +141,26 @@
     white-space: nowrap;
     text-transform: capitalize;
     font: 20px $YESEVAONE;
+    margin-bottom: 7px;
+  }
+
+  &__text {
+    margin-bottom: 7px;
   }
 }
+
+
+@media (max-width: 991px) {
+  .product {
+    width: 45%;
+  }
+}
+
+
+@media (max-width: 575px) {
+  .product {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
