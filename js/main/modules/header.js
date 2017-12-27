@@ -3,7 +3,8 @@ var iconMenu = '.main-header__icon-menu',
     navigation = '.navigation',
     navItem = '.navigation-item',
     insideMenu = '.inside-menu',
-    mainHeader = '.main-header';
+    mainHeader = '.main-header',
+    insideMenuLink = '.inside-menu__link';
 
 
 var headerFunctions = {
@@ -31,6 +32,11 @@ var headerFunctions = {
             }
         }else {
             headerFunctions.showInsideMenu();
+            $(insideMenuLink).click(function() {
+                $(navigation).fadeOut(function () {
+                    $(mainHeader).after($(navigation));
+                });
+            })
         }
 
     },
