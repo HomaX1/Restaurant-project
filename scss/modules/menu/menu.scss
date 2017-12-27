@@ -1,8 +1,27 @@
+.menu-wrap {
+  &__title {
+    text-align: center;
+    font: 36px $YESEVAONE;
+    color: $BUDDHAGOLD;
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+    &::after {
+      display: block;
+      width: 247px;
+      height: 24px;
+      content: url(/img/decoration_orange.png);
+      padding-top: 5px;
+      margin: 0 auto;
+    }
+  }
+}
+
 .menu-icons {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 
   &__link {
     width: 45px;
@@ -10,11 +29,6 @@
     background: url("/img/sprite-food-icon.png") 0 0 no-repeat;
     box-sizing: border-box;
     transition: border-bottom .1s, padding-bottom .1s;
-
-    &:hover, &:focus {
-      padding-bottom: 5px;
-      border-bottom: 2px solid $BUDDHAGOLD;
-    }
 
     &_dishes {
       height: 33px;
@@ -43,13 +57,18 @@
   }
 }
 
+.activeCategory {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #cc9900;
+}
+
 .sorts {
   text-align: center;
   text-transform: capitalize;
   width: 285px;
   font-size: 16px;
   font-weight: 400;
-  margin: 0 auto 40px;
+  margin: 0 auto 60px;
   position: relative;
 }
 
@@ -71,6 +90,7 @@
   display: none;
   width: 283px;
   border: 1px solid $BUDDHAGOLD;
+  background-color: $WHITE;
   border-top: none;
   position: absolute;
   left: 0;
@@ -83,5 +103,42 @@
     &:hover {
       background-color: $BUDDHAGOLD;
     }
+  }
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  width: 35%;
+  height: 150px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  overflow: hidden;
+
+  &__img {
+    width: 150px;
+    height: 150px;
+    padding-right: 20px;
+  }
+}
+
+.product-info {
+  width: 240px;
+  font-size: 14px;
+  text-align: left;
+  overflow: hidden;
+
+
+  &__title {
+    white-space: nowrap;
+    text-transform: capitalize;
+    font: 20px $YESEVAONE;
   }
 }

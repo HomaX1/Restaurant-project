@@ -1,6 +1,6 @@
 [
   {
-    "name": "Barbecued red pork",
+    "name": "Barbecued pork",
     "category": "dishes",
     "img": "/img/all-menu_sm/barbecued-red-pork_sm.jpg",
     "ingredients": "pork, sauce, rice",
@@ -28,7 +28,7 @@
     "price": "11$"
   },
   {
-    "name": "Salad with chicken breast",
+    "name": "Salad with chicken",
     "category": "salads",
     "img": "/img/all-menu_sm/salad-with-chicken_sm.jpg",
     "ingredients": "chicken, tomato, arugula",
@@ -63,7 +63,7 @@
     "price": "10$"
   },
   {
-    "name": "Creamy pumpkin soup",
+    "name": "Pumpkin soup",
     "category": "soups",
     "img": "/img/all-menu_sm/creamy-pumpkin-soup_sm.jpg",
     "ingredients": "whole squash, pumpkin",
@@ -98,7 +98,7 @@
     "price": "10$"
   },
   {
-    "name": "Waffle with fruits and nuts",
+    "name": "Surprise Waffle",
     "category": "desserts",
     "img": "/img/all-menu_sm/fruit-nuts-waffle_sm.jpg",
     "ingredients": "fruits, nuts, waffle",
@@ -119,7 +119,7 @@
     "price": "6$"
   },
   {
-    "name": "Ice-cream with chocolate brownie",
+    "name": "Chocolate Brownie",
     "category": "desserts",
     "img": "/img/all-menu_sm/vanilla-ice-cream-with-chocolate-brownie_sm.jpg",
     "ingredients": "vanilla ice-cream, chocolate brownie, strawberry",

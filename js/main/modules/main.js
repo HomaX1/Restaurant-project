@@ -3,7 +3,8 @@
 
     var content = '#content',
         pageLink = '',
-        locationObj = window.location.href;
+        locationObj = window.location.href,
+        menuIconLink = '.menu-icons__link';
 
 
     header.innerHTML = MyApp.templates.header();
@@ -29,12 +30,20 @@
 
             var filterResp = resp.filter(function (respElem) {
                 if (respElem.category === pageLink) {
+                    $('.menu-icons__link').addClass('activeCategory');
                     return respElem;
                 } else if (pageLink === 'menu-link') {
                     return respElem;
                 }
             });
             mainFunctions.renderPage(menu, MyApp.templates.menu, filterResp);
+
+            if(pageLink === 'menu-link') {
+                $('.menu-icons__link_all').addClass('activeCategory');
+            } else {
+                $('.menu-icons__link' + '_' + pageLink).addClass('activeCategory');
+            }
+
             menuFunctions.listShow(filterResp);
         },
         pageNavigation: function () {
