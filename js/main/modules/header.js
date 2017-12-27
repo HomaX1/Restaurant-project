@@ -33,9 +33,13 @@ var headerFunctions = {
         }else {
             headerFunctions.showInsideMenu();
             $(insideMenuLink).click(function() {
-                $(navigation).fadeOut(function () {
-                    $(mainHeader).after($(navigation));
-                });
+                if (document.documentElement.clientWidth >= 768 && $(this).has(e)) {
+                    $(navigation).css('display', 'flex');
+                }else {
+                    $(navigation).fadeOut(function () {
+                        $(mainHeader).after($(navigation));
+                    });
+                }
             })
         }
 
