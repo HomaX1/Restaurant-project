@@ -1,0 +1,487 @@
+.reservation-wrap {
+  &__title {
+    text-align: center;
+    font: 36px $YESEVAONE;
+    color: $BUDDHAGOLD;
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+    &::after {
+      display: block;
+      width: 247px;
+      height: 24px;
+      content: url(/img/decoration_orange.png);
+      padding-top: 5px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.book-table {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px;
+  margin-bottom: 50px;
+}
+
+.scheme, .form-reservation {
+  margin-right: 0;
+  width: 45%;
+}
+
+.scheme {
+  flex-grow: 1;
+  margin-right: 20px;
+
+  &__text {
+    font: bold 18px $GENTIUM;
+    margin-bottom: 30px;
+
+    &::before {
+      content: '1';
+      text-align: center;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border: 2px solid $BUDDHAGOLD;
+      border-radius: 50%;
+      line-height: 30px;
+      margin-right: 10px;
+      margin-bottom: 30px;
+    }
+
+    &_before {
+      &::before {
+        content: '2'
+      }
+    }
+  }
+}
+
+.scheme-tables {
+  width: 592px;
+  position: relative;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: transparent;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+  }
+}
+
+.vertical-table {
+  transform: rotate(90deg);
+}
+
+.square-table {
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+}
+
+#table1 {
+  top: 288px;
+  left: 145px;
+}
+
+#table2 {
+  top: 289px;
+  left: 79px;
+}
+
+#table3 {
+  top: 234px;
+  left: 79px;
+}
+
+#table4 {
+  top: 179px;
+  left: 79px;
+
+}
+
+#table5 {
+  top: 116px;
+  left: 279px;
+}
+
+#table6 {
+  top: 65px;
+  left: 279px;
+}
+
+#table7 {
+   top: 65px;
+   left: 330px;
+}
+
+#table8 {
+  top: 116px;
+  left: 330px;
+}
+
+#table9 {
+  top: 115px;
+  left: 381px;
+}
+
+#table10 {
+  top: 63px;
+  left: 381px;
+}
+
+#table11 {
+  top: 63px;
+  left: 465px;
+}
+
+#table12 {
+  top: 115px;
+  left: 465px;
+}
+
+#table13 {
+  top: 168px;
+  left: 479px;
+}
+
+#table14 {
+  top: 206px;
+  left: 479px;
+}
+
+#table15 {
+  top: 242px;
+  left: 479px;
+}
+
+#table16 {
+  top: 187px;
+  left: 440px;
+}
+
+#table17 {
+  top: 225px;
+  left: 440px;
+}
+
+#table18 {
+  top: 262px;
+  left: 440px;
+}
+
+#table19 {
+  top: 168px;
+  left: 404px;
+}
+
+#table20 {
+  top: 205px;
+  left: 404px;
+}
+
+#table21 {
+  top: 242px;
+  left: 404px;
+}
+
+.form-reservation {
+  text-transform: capitalize;
+  font-size: 18px;
+  color: $BLACK;
+  padding: 0 10px 10px;
+
+  &__required {
+    display: block;
+    font-size: 14px;
+    color: $BUDDHAGOLD;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font: 16px $GENTIUM;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    text-align: center;
+    width: 100%;
+    color: $BUDDHAGOLD;
+    border: none;
+    border-bottom: 2px solid $BUDDHAGOLD;
+    margin-bottom: 20px;
+
+    &::placeholder {
+      text-align: center;
+      text-transform: capitalize;
+      color: $BUDDHAGOLD;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.selects-time {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 40px;
+}
+
+.select-item {
+  text-align: center;
+  position: relative;
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.select-item-title {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.form-select {
+  display: inline-block;
+  width: 130px;
+  height: 30px;
+  border: 1px solid $BUDDHAGOLD;
+  line-height: 30px;
+  cursor: pointer;
+  margin-left: 5px;
+
+  &__icon {
+    font-size: 16px;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    color: $BUDDHAGOLD;
+  }
+}
+
+.form-select-list {
+  display: none;
+  width: 130px;
+  border: 1px solid $BUDDHAGOLD;
+  background-color: $WHITE;
+  border-top: none;
+  position: absolute;
+  top: 32px;
+  right: 0;
+
+  &__item {
+    text-transform: lowercase;
+    padding: 2px 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $BUDDHAGOLD;
+    }
+  }
+}
+
+.form-reservation__button {
+  text-transform: uppercase;
+  display: block;
+  background-color: rgba(0, 0, 0, .65);
+  color: $WHITE;
+  border: 2px solid $BUDDHAGOLD;
+  padding: 15px 30px;
+  margin: 0 auto;
+  transition: color .1s, background-color .1s;
+
+  &:hover {
+    color: $BLACK;
+    background-color: $WHITE;
+  }
+}
+
+
+@media (max-width: 1169px) {
+  .scheme, .form-reservation {
+    width: 37%;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  .book-table {
+    flex-direction: column;
+  }
+
+  .scheme {
+    margin-bottom: 30px;
+  }
+
+  .scheme-tables {
+    width: 592px;
+    margin: 0 auto;
+  }
+
+  .scheme, .form-reservation {
+    width: 100%;
+  }
+
+  .form-reservation {
+    padding: 0;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .scheme {
+    &__text {
+      font-size: 14px;
+    }
+  }
+
+  .scheme-tables {
+    &__item {
+      width: 20px;
+      height: 10px;
+    }
+  }
+
+  .scheme-tables {
+    width: 300px;
+  }
+
+  .square-table {
+    width: 10px;
+    height: 10px;
+  }
+
+  #table1 {
+    top: 146px;
+    left: 73px;
+  }
+
+  #table2 {
+    top: 147px;
+    left: 40px;
+  }
+
+  #table3 {
+    top: 119px;
+    left: 40px;
+  }
+
+  #table4 {
+    top: 91px;
+    left: 40px;
+
+  }
+
+  #table5 {
+    top: 59px;
+    left: 141px;
+  }
+
+  #table6 {
+    top: 33px;
+    left: 141px;
+  }
+
+  #table7 {
+    top: 33px;
+    left: 168px;
+  }
+
+  #table8 {
+    top: 59px;
+    left: 168px;
+  }
+
+  #table9 {
+    top: 58px;
+    left: 193px;
+  }
+
+  #table10 {
+    top: 32px;
+    left: 193px;
+  }
+
+  #table11 {
+    top: 32px;
+    left: 236px;
+  }
+
+  #table12 {
+    top: 58px;
+    left: 236px;
+  }
+
+  #table13 {
+    top: 85px;
+    left: 243px;
+  }
+
+  #table14 {
+    top: 104px;
+    left: 243px;
+  }
+
+  #table15 {
+    top: 123px;
+    left: 243px;
+  }
+
+  #table16 {
+    top: 95px;
+    left: 223px;
+  }
+
+  #table17 {
+    top: 114px;
+    left: 223px;
+  }
+
+  #table18 {
+    top: 133px;
+    left: 223px;
+  }
+
+  #table19 {
+    top: 85px;
+    left: 205px;
+  }
+
+  #table20 {
+    top: 104px;
+    left: 205px;
+  }
+
+  #table21 {
+    top: 123px;
+    left: 205px;
+  }
+
+  .select-item-title {
+    display: block;
+    margin-bottom: 7px;
+  }
+
+  .form-select-list {
+    top: 58px;
+  }
+
+  .form-select__icon {
+    top: 34px;
+  }
+}
+
+

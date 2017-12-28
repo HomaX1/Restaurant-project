@@ -1,1 +1,102 @@
-<p>It's a reservetion page!</p>
+<div class="container reservation-wrap">
+    <h3 class="reservation-wrap__title">Reservation</h3>
+    <div class="book-table">
+        <div class="scheme">
+            <span class="scheme__text">Click on the table you want to book</span>
+            <div class="scheme-tables">
+                <img class="scheme-tables__img" src="/img/map-restaurant.jpg" alt="Restaurant's map">
+                <span id="table1" data-id="1" class="scheme-tables__item vip-table"></span>
+                <span id="table2" data-id="2" class="scheme-tables__item vip-table"></span>
+                <span id="table3" data-id="3" class="scheme-tables__item vip-table"></span>
+                <span id="table4" data-id="4" class="scheme-tables__item vip-table"></span>
+                <span id="table5" data-id="10" class="scheme-tables__item horizontal-table"></span>
+                <span id="table6" data-id="20" class="scheme-tables__item horizontal-table"></span>
+                <span id="table7" data-id="30" class="scheme-tables__item horizontal-table"></span>
+                <span id="table8" data-id="40" class="scheme-tables__item horizontal-table"></span>
+                <span id="table9" data-id="50" class="scheme-tables__item vertical-table"></span>
+                <span id="table10" data-id="60" class="scheme-tables__item vertical-table"></span>
+                <span id="table11" data-id="70" class="scheme-tables__item vertical-table"></span>
+                <span id="table12" data-id="80" class="scheme-tables__item vertical-table"></span>
+                <span id="table13" data-id="11" class="scheme-tables__item square-table"></span>
+                <span id="table14" data-id="12" class="scheme-tables__item square-table"></span>
+                <span id="table15" data-id="13" class="scheme-tables__item square-table"></span>
+                <span id="table16" data-id="21" class="scheme-tables__item square-table"></span>
+                <span id="table17" data-id="22" class="scheme-tables__item square-table"></span>
+                <span id="table18" data-id="23" class="scheme-tables__item square-table"></span>
+                <span id="table19" data-id="31" class="scheme-tables__item square-table"></span>
+                <span id="table20" data-id="32" class="scheme-tables__item square-table"></span>
+                <span id="table21" data-id="33" class="scheme-tables__item square-table"></span>
+
+            </div>
+        </div>
+        <form class="form-reservation" action="#">
+            <span class="scheme__text scheme__text_before">Enter information about you for feedback</span>
+            <span class="form-reservation__required">* Required</span>
+            <label class="form-reservation__title" for="first-name">First name*</label>
+            <input class="form-reservation__input" id="first-name" type="text" name="first-name"
+                   pattern="[A-Za-z]{1,50}" placeholder="First name" required>
+            <label class="form-reservation__title" for="phone-number">Phone number*</label>
+            <input class="form-reservation__input" id="phone-number" type="text" name="phone-number"
+                   pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="123-456-7890" required>
+            <label class="form-reservation__title" for="table-number">Table number*</label>
+            <input class="form-reservation__input" id="table-number" type="text" name="table-number"
+                   pattern="\d{1,2}" placeholder="1" required>
+            <div class="selects-time">
+                <div class="select-item">
+                    <span class="form-reservation__title select-item-title">From:*</span>
+                    <div class="form-select">
+                        <span class="form-select__text">none</span>
+                        <i class="form-select__icon fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <ul class="form-select-list">
+                        <li class="form-select-list__item">4 pm</li>
+                        <li class="form-select-list__item">5 pm</li>
+                        <li class="form-select-list__item">6 pm</li>
+                        <li class="form-select-list__item">7 pm</li>
+                        <li class="form-select-list__item">8 pm</li>
+                        <li class="form-select-list__item">9 pm</li>
+                        <li class="form-select-list__item">10 pm</li>
+                        <li class="form-select-list__item">11 pm</li>
+                    </ul>
+                </div>
+                <div class="select-item">
+                    <span class="form-reservation__title select-item-title">To:*</span>
+                    <div class="form-select">
+                        <span class="form-select__text">none</span>
+                        <i class="form-select__icon fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <ul class="form-select-list form-select-list_right">
+                        <li class="form-select-list__item">5 pm</li>
+                        <li class="form-select-list__item">6 pm</li>
+                        <li class="form-select-list__item">7 pm</li>
+                        <li class="form-select-list__item">8 pm</li>
+                        <li class="form-select-list__item">9 pm</li>
+                        <li class="form-select-list__item">10 pm</li>
+                        <li class="form-select-list__item">11 pm</li>
+                    </ul>
+                </div>
+                <!-- <select id="select-from" class="select-from" name="select-from" required>
+                    <option class="select-from__item" value="4 pm">4 pm</option>
+                    <option class="select-from__item" value="5 pm">5 pm</option>
+                    <option class="select-from__item" value="6 pm">6 pm</option>
+                    <option class="select-from__item" value="7 pm">7 pm</option>
+                    <option class="select-from__item" value="8 pm">8 pm</option>
+                    <option class="select-from__item" value="9 pm">9 pm</option>
+                    <option class="select-from__item" value="10 pm">10 pm</option>
+                    <option class="select-from__item" value="11 pm">11 pm</option>
+                </select>-->
+                <!--<select id="select-to" class="select-to" name="select-to" required>
+                    <option class="select-to__item" value="5 pm">5 pm</option>
+                    <option class="select-to__item" value="6 pm">6 pm</option>
+                    <option class="select-to__item" value="7 pm">7 pm</option>
+                    <option class="select-to__item" value="8 pm">8 pm</option>
+                    <option class="select-to__item" value="9 pm">9 pm</option>
+                    <option class="select-to__item" value="10 pm">10 pm</option>
+                    <option class="select-to__item" value="11 pm">11 pm</option>
+                </select>-->
+            </div>
+            <button class="form-reservation__button" type="submit">Book a table</button>
+        </form>
+
+    </div>
+</div>
