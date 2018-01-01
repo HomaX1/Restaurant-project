@@ -38,3 +38,10 @@ li {
 #content {
   flex: 1 0 auto;
 }
+
+.title {
+  &_margin {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}

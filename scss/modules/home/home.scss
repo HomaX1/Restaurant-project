@@ -117,18 +117,7 @@
   margin-top: 105px;
 
   &__title {
-    font: 36px $YESEVAONE;
-    color: $BUDDHAGOLD;
     margin-bottom: 20px;
-
-    &::after {
-      display: block;
-      width: 247px;
-      height: 24px;
-      content: url("/img/decoration_orange.png");
-      padding-top: 5px;
-      margin: 0 auto;
-    }
   }
 
   &__text {
@@ -141,6 +130,21 @@
   &__img {
     width: 219px;
     height: 221px;
+  }
+}
+
+.title {
+  text-align: center;
+  font: 36px $YESEVAONE;
+  color: $BUDDHAGOLD;
+
+  &::after {
+    display: block;
+    width: 247px;
+    height: 24px;
+    content: url("/img/decoration_orange.png");
+    padding-top: 5px;
+    margin: 0 auto;
   }
 }
 

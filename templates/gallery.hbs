@@ -1,1 +1,10 @@
-<p>It's a gallery page!</p>
+<div class="container gallery-wrap">
+    <h3 class="gallery-wrap__title title title_margin">Gallery</h3>
+    <div class="gallery-products">
+        {{#each menu}}
+            <div class="gallery-product">
+                <img class="gallery-product__img" src="{{imgBig}}" alt="Food">
+            </div>
+        {{/each}}
+    </div>
+</div>

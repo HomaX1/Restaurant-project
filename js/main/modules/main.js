@@ -30,7 +30,7 @@
 
             var filterResp = resp.filter(function (respElem) {
                 if (respElem.category === pageLink) {
-                    $('.menu-icons__link').addClass('activeCategory');
+                    $(menuIconLink).addClass('activeCategory');
                     return respElem;
                 } else if (pageLink === 'menu-link') {
                     return respElem;
@@ -88,7 +88,9 @@
                         locationObj = '#reservation';
                         break;
                     case 'gallery-link':
-                        mainFunctions.renderPage(gallery, MyApp.templates.gallery);
+                        $.get('/menu.json', function(resp) {
+                            mainFunctions.renderPage(gallery, MyApp.templates.gallery, resp);
+                        });
                         locationObj = '#gallery';
                         break;
                     case 'contacts-link':

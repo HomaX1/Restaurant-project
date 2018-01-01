@@ -3,6 +3,7 @@
     "name": "Barbecued pork",
     "category": "dishes",
     "img": "/img/all-menu_sm/barbecued-red-pork_sm.jpg",
+    "imgBig": "/img/all-menu/barbecued-red-pork.jpg",
     "ingredients": "pork, sauce, rice",
     "price": "15$"
   },
@@ -10,6 +11,7 @@
     "name": "Chicken breast",
     "category": "dishes",
     "img": "/img/all-menu_sm/chicken-breast_sm.jpg",
+    "imgBig": "/img/all-menu/chicken-breast.jpg",
     "ingredients": "chicken, sauce, salad",
     "price": "12$"
   },
@@ -17,6 +19,7 @@
     "name": "Grilled salmon",
     "category": "dishes",
     "img": "/img/all-menu_sm/grilled-salmon_sm.jpg",
+    "imgBig": "/img/all-menu/grilled-salmon.jpg",
     "ingredients": "salmon, vegetables",
     "price": "20$"
   },
@@ -24,6 +27,7 @@
     "name": "Spaghetti carbonara",
     "category": "dishes",
     "img": "/img/all-menu_sm/spaghetti-carbonara_sm.jpg",
+    "imgBig": "/img/all-menu/spaghetti-carbonara.jpg",
     "ingredients": "spaghetti, cheese, egg, spice",
     "price": "11$"
   },
@@ -31,6 +35,7 @@
     "name": "Salad with chicken",
     "category": "salads",
     "img": "/img/all-menu_sm/salad-with-chicken_sm.jpg",
+    "imgBig": "/img/all-menu/salad-with-chicken.jpg",
     "ingredients": "chicken, tomato, arugula",
     "price": "7$"
   },
@@ -38,6 +43,7 @@
     "name": "Vegetable salad",
     "category": "salads",
     "img": "/img/all-menu_sm/vegetable-salad_sm.jpg",
+    "imgBig": "/img/all-menu/vegetable-salad.jpg",
     "ingredients": "arugula, toast, tomato, sauce",
     "price": "4$"
   },
@@ -45,6 +51,7 @@
     "name": "Greek salad",
     "category": "salads",
     "img": "/img/all-menu_sm/greek-salad_sm.jpg",
+    "imgBig": "/img/all-menu/greek-salad.jpg",
     "ingredients": "tomato, lettuce, olive, cheese, cucumber",
     "price": "5$"
   },
@@ -52,6 +59,7 @@
     "name": "Salad with rice",
     "category": "salads",
     "img": "/img/all-menu_sm/salad-with-rice_sm.jpg",
+    "imgBig": "/img/all-menu/salad-with-rice.jpg",
     "ingredients": " cheese, tomato, arugula, carrot",
     "price": "5$"
   },
@@ -59,6 +67,7 @@
     "name": "Spicy salad",
     "category": "salads",
     "img": "/img/all-menu_sm/spicy-salad_sm.jpg",
+    "imgBig": "/img/all-menu/spicy-salad.jpg",
     "ingredients": "chicken, onion, sauce, greenery",
     "price": "10$"
   },
@@ -66,6 +75,7 @@
     "name": "Pumpkin soup",
     "category": "soups",
     "img": "/img/all-menu_sm/creamy-pumpkin-soup_sm.jpg",
+    "imgBig": "/img/all-menu/creamy-pumpkin-soup.jpg",
     "ingredients": "whole squash, pumpkin",
     "price": "7$"
   },
@@ -73,6 +83,7 @@
     "name": "Sea soup",
     "category": "soups",
     "img": "/img/all-menu_sm/sea-soup_sm.jpg",
+    "imgBig": "/img/all-menu/sea-soup.jpg",
     "ingredients": "mussel, tomato, octopus, pepper, prawn",
     "price": "17$"
   },
@@ -80,6 +91,7 @@
     "name": "Spicy prawn soup",
     "category": "soups",
     "img": "/img/all-menu_sm/spicy-prawn-soup_sm.jpg",
+    "imgBig": "/img/all-menu/spicy-prawn-soup.jpg",
     "ingredients": "prawn, greenery, tomato, mushroom",
     "price": "10$"
   },
@@ -87,6 +99,7 @@
     "name": "Mixed soup",
     "category": "soups",
     "img": "/img/all-menu_sm/mixed-soup_sm.jpg",
+    "imgBig": "/img/all-menu/mixed-soup.jpg",
     "ingredients": "prawn, vegetables",
     "price": "9$"
   },
@@ -94,6 +107,7 @@
     "name": "Thai soup",
     "category": "soups",
     "img": "/img/all-menu_sm/thai-soup_sm.jpg",
+    "imgBig": "/img/all-menu/thai-soup.jpg",
     "ingredients": "crayfish, pepper, tomato",
     "price": "10$"
   },
@@ -101,6 +115,7 @@
     "name": "Surprise Waffle",
     "category": "desserts",
     "img": "/img/all-menu_sm/fruit-nuts-waffle_sm.jpg",
+    "imgBig": "/img/all-menu/fruit-nuts-waffle.jpg",
     "ingredients": "fruits, nuts, waffle",
     "price": "8$"
   },
@@ -108,6 +123,7 @@
     "name": "Yogurt",
     "category": "desserts",
     "img": "/img/all-menu_sm/yogurt_sm.jpg",
+    "imgBig": "/img/all-menu/yogurt.jpg",
     "ingredients": "yogurt, fruits",
     "price": "3$"
   },
@@ -115,6 +131,7 @@
     "name": "Waffles with fruits",
     "category": "desserts",
     "img": "/img/all-menu_sm/waffles-with-fruits_sm.jpg",
+    "imgBig": "/img/all-menu/waffles-with-fruits.jpg",
     "ingredients": "4 waffles, fruits",
     "price": "6$"
   },
@@ -122,6 +139,7 @@
     "name": "Chocolate Brownie",
     "category": "desserts",
     "img": "/img/all-menu_sm/vanilla-ice-cream-with-chocolate-brownie_sm.jpg",
+    "imgBig": "/img/all-menu/vanilla-ice-cream-with-chocolate-brownie.jpg",
     "ingredients": "vanilla ice-cream, chocolate brownie, strawberry",
     "price": "10$"
   },
@@ -129,6 +147,7 @@
     "name": "Black tea",
     "category": "beverages",
     "img": "/img/all-menu_sm/black-tea_sm.jpg",
+    "imgBig": "/img/all-menu/black-tea.jpg",
     "ingredients": "black leaf tea",
     "price": "3$"
   },
@@ -136,6 +155,7 @@
     "name": "Green tea",
     "category": "beverages",
     "img": "/img/all-menu_sm/green-tea_sm.jpg",
+    "imgBig": "/img/all-menu/green-tea.jpg",
     "ingredients": "green leaf tea",
     "price": "3$"
   },
@@ -143,6 +163,7 @@
     "name": "Latte",
     "category": "beverages",
     "img": "/img/all-menu_sm/coffee-latte_sm.jpg",
+    "imgBig": "/img/all-menu/coffee-latte.jpg",
     "ingredients": "coffee, milk",
     "price": "5$"
   },
@@ -150,6 +171,7 @@
     "name": "Orange juice",
     "category": "beverages",
     "img": "/img/all-menu_sm/orange-juice_sm.jpg",
+    "imgBig": "/img/all-menu/orange-juice.jpg",
     "ingredients": "orange's juice",
     "price": "5$"
   },
@@ -157,6 +179,7 @@
     "name": "Smoothie",
     "category": "beverages",
     "img": "/img/all-menu_sm/smoothie_sm.jpg",
+    "imgBig": "/img/all-menu/smoothie.jpg",
     "ingredients": "fruit's smoothie",
     "price": "7$"
   }
