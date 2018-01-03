@@ -1,0 +1,148 @@
+.contacts-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.phone__text_margin, .email__text_margin {
+  margin-right: 5px;
+}
+
+.phone__link_color:hover, .email__link_color:hover {
+  color: $BLACK;
+}
+
+.social-networks {
+  &_align {
+    text-align: center;
+  }
+}
+
+.social-networks-link {
+  &__icon {
+    box-sizing: border-box;
+    border: 1px solid $ANZAC;
+  }
+}
+
+.map {
+  position: relative;
+  margin-bottom: 30px;
+
+  &__img {
+    width: 100%;
+  }
+}
+
+.address {
+  text-align: center;
+  width: 300px;
+  background-color: $WHITE;
+  position: absolute;
+  top: 140px;
+  left: 260px;
+  z-index: 2;
+  padding: 10px;
+
+  &__text {
+    font-size: 17px;
+
+    &_color {
+      color: $DUSTYGRAY;
+    }
+  }
+
+  &__title {
+    font: 22px $YESEVAONE;
+    margin: 10px 0 5px;
+  }
+}
+
+.days {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  margin: 10px 0;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: $JAPANESELAUREL;
+    }
+
+    &_color {
+      &::after {
+        background-color: $REDCHERRY;
+      }
+    }
+  }
+}
+
+.hours {
+  font-size: 18px;
+
+  &__text {
+    color: $REDCHERRY;
+  }
+}
+
+.hours-open__text, .hours__text {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.hours-open {
+  margin-bottom: 10px;
+
+  &__text {
+    color: $JAPANESELAUREL;
+    margin-right: 10px;
+  }
+}
+
+.hours-info {
+  display: inline-block;
+
+  &__text {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+}
+
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .address {
+    top: 40px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .map {
+    margin-top: 275px;
+  }
+
+  .address {
+    top: -250px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+  }
+}
