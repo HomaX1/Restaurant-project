@@ -88,6 +88,7 @@
                     case 'gallery-link':
                         $.get('/menu.json', function(resp) {
                             mainFunctions.renderPage(gallery, MyApp.templates.gallery, resp);
+                            galleryFunctions.renderModalImg();
                         });
                         locationObj = '#gallery';
                         break;
