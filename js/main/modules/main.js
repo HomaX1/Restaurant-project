@@ -3,8 +3,7 @@
 
     var content = '#content',
         pageLink = '',
-        locationObj = window.location.href,
-        menuIconLink = '.menu-icons__link';
+        locationObj = window.location.href;
 
 
     header.innerHTML = MyApp.templates.header();
@@ -30,7 +29,6 @@
 
             var filterResp = resp.filter(function (respElem) {
                 if (respElem.category === pageLink) {
-                    $(menuIconLink).addClass('activeCategory');
                     return respElem;
                 } else if (pageLink === 'menu-link') {
                     return respElem;
@@ -44,11 +42,11 @@
                 $('.menu-icons__link' + '_' + pageLink).addClass('activeCategory');
             }
 
-            menuFunctions.listShow(filterResp);
+            menuFunctions.listShow(filterResp, pageLink);
         },
         pageNavigation: function () {
 
-            $('body').on('click', '.navigation, .footer-navigation, .main-header__logo, .menu-icons', (function (event) {
+            $('body').on('click', '.navigation, .footer-navigation, .main-header__logo, .menu-icons, .info-buttons', (function (event) {
 
                 var pageId = event.target.id;
 
