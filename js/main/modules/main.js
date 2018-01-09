@@ -84,6 +84,7 @@
                     case 'reservation-link':
                         mainFunctions.renderPage(reservation, MyApp.templates.reservation);
                         locationObj = '#reservation';
+                        reservationFunctions.renderReservation();
                         break;
                     case 'gallery-link':
                         $.get('/menu.json', function(resp) {

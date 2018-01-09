@@ -29,26 +29,29 @@
 
             </div>
         </div>
-        <form class="form-reservation" action="#">
+        <form id="form-book" class="form-reservation" action="#">
             <span class="scheme__text scheme__text_before">Enter information about you for feedback</span>
             <span class="form-reservation__required">* Required</span>
             <label class="form-reservation__title" for="first-name">First name*</label>
             <input class="form-reservation__input" id="first-name" type="text" name="first-name"
-                   pattern="[A-Za-z]{1,50}" placeholder="First name" required>
+                   placeholder="First name" required>
+            <span id="valid-name" class="valid"></span>
             <label class="form-reservation__title" for="phone-number">Phone number*</label>
             <input class="form-reservation__input" id="phone-number" type="text" name="phone-number"
-                   pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="123-456-7890" required>
+                   placeholder="123-456-7890" required>
+            <span id="valid-phone" class="valid"></span>
             <label class="form-reservation__title" for="table-number">Table number*</label>
             <input class="form-reservation__input" id="table-number" type="text" name="table-number"
-                   pattern="\d{1,2}" placeholder="1" required>
+                   placeholder="number" readonly="readonly" required>
+            <span id="valid-table-number" class="valid"></span>
             <div class="selects-time">
                 <div class="select-item">
                     <span class="form-reservation__title select-item-title">From:*</span>
-                    <div class="form-select">
-                        <span class="form-select__text">none</span>
+                    <div class="form-select form-select-from">
+                        <span class="form-select__text form-select__text-from">none</span>
                         <i class="form-select__icon fa fa-chevron-down" aria-hidden="true"></i>
                     </div>
-                    <ul class="form-select-list">
+                    <ul class="form-select-list form-select-list-from">
                         <li class="form-select-list__item">4 pm</li>
                         <li class="form-select-list__item">5 pm</li>
                         <li class="form-select-list__item">6 pm</li>
@@ -61,11 +64,11 @@
                 </div>
                 <div class="select-item">
                     <span class="form-reservation__title select-item-title">To:*</span>
-                    <div class="form-select">
-                        <span class="form-select__text">none</span>
+                    <div class="form-select form-select-to">
+                        <span class="form-select__text form-select__text-to">none</span>
                         <i class="form-select__icon fa fa-chevron-down" aria-hidden="true"></i>
                     </div>
-                    <ul class="form-select-list form-select-list_right">
+                    <ul class="form-select-list form-select-list-to">
                         <li class="form-select-list__item">5 pm</li>
                         <li class="form-select-list__item">6 pm</li>
                         <li class="form-select-list__item">7 pm</li>
@@ -75,27 +78,9 @@
                         <li class="form-select-list__item">11 pm</li>
                     </ul>
                 </div>
-                <!-- <select id="select-from" class="select-from" name="select-from" required>
-                    <option class="select-from__item" value="4 pm">4 pm</option>
-                    <option class="select-from__item" value="5 pm">5 pm</option>
-                    <option class="select-from__item" value="6 pm">6 pm</option>
-                    <option class="select-from__item" value="7 pm">7 pm</option>
-                    <option class="select-from__item" value="8 pm">8 pm</option>
-                    <option class="select-from__item" value="9 pm">9 pm</option>
-                    <option class="select-from__item" value="10 pm">10 pm</option>
-                    <option class="select-from__item" value="11 pm">11 pm</option>
-                </select>-->
-                <!--<select id="select-to" class="select-to" name="select-to" required>
-                    <option class="select-to__item" value="5 pm">5 pm</option>
-                    <option class="select-to__item" value="6 pm">6 pm</option>
-                    <option class="select-to__item" value="7 pm">7 pm</option>
-                    <option class="select-to__item" value="8 pm">8 pm</option>
-                    <option class="select-to__item" value="9 pm">9 pm</option>
-                    <option class="select-to__item" value="10 pm">10 pm</option>
-                    <option class="select-to__item" value="11 pm">11 pm</option>
-                </select>-->
             </div>
             <button class="form-reservation__button" type="submit">Book a table</button>
+            <p class="form-reservation__text">Thanks a lot! Your table was booked.</p>
         </form>
 
     </div>

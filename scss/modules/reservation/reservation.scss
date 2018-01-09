@@ -179,7 +179,28 @@
   text-transform: capitalize;
   font-size: 18px;
   color: $BLACK;
+  position: relative;
   padding: 0 10px 10px;
+
+  &__button {
+    text-transform: uppercase;
+    display: block;
+    background-color: rgba(0, 0, 0, .65);
+    color: $WHITE;
+    border: 2px solid $BUDDHAGOLD;
+    padding: 15px 30px;
+    margin: 0 auto;
+    transition: color .1s, background-color .1s;
+
+    &:hover {
+      color: $BLACK;
+      background-color: $WHITE;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
 
   &__required {
     display: block;
@@ -205,18 +226,28 @@
     &::placeholder {
       text-align: center;
       text-transform: capitalize;
-      color: $BUDDHAGOLD;
+      color: lighten($ANZAC, 10%);
     }
 
     &:focus {
       outline: none;
     }
   }
+
+  &__text {
+    display: none;
+    text-align: center;
+    font: 16px $YESEVAONE;
+    color: $WHITE;
+    background-color: rgba(0, 112, 0, .75);
+    padding: 12px 20px;
+    margin-top: 10px;
+  }
 }
 
 .selects-time {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 20px 0 40px;
 }
 
@@ -243,6 +274,10 @@
   line-height: 30px;
   cursor: pointer;
   margin-left: 5px;
+
+  &__text {
+    text-transform: lowercase;
+  }
 
   &__icon {
     font-size: 16px;
@@ -274,20 +309,32 @@
   }
 }
 
-.form-reservation__button {
-  text-transform: uppercase;
-  display: block;
-  background-color: rgba(0, 0, 0, .65);
-  color: $WHITE;
-  border: 2px solid $BUDDHAGOLD;
-  padding: 15px 30px;
-  margin: 0 auto;
-  transition: color .1s, background-color .1s;
+.valid {
+  text-transform: lowercase;
+  font-size: 14px;
+  color: $REDCHERRY;
+  position: absolute;
+  right: 15px;
 
-  &:hover {
-    color: $BLACK;
-    background-color: $WHITE;
+  &:first-letter {
+    text-transform: uppercase;
   }
+}
+
+.border {
+  border: 1px solid $REDCHERRY;
+}
+
+#valid-name {
+  top: 160px;
+}
+
+#valid-phone {
+  top: 230px;
+}
+
+#valid-table-number {
+  top: 300px;
 }
 
 
