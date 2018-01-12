@@ -3,7 +3,9 @@
 
     var content = '#content',
         pageLink = '',
-        locationObj = window.location.href;
+        locationObj = window.location.href,
+        menuPage = '.menu-page',
+        allMenuId = '#all-menu';
 
 
     header.innerHTML = MyApp.templates.header();
@@ -36,7 +38,7 @@
             });
             mainFunctions.renderPage(menu, MyApp.templates.menu, filterResp);
 
-            if(pageLink === 'menu-link') {
+            if (pageLink === 'menu-link') {
                 $('.menu-icons__link_all').addClass('activeCategory');
             } else {
                 $('.menu-icons__link' + '_' + pageLink).addClass('activeCategory');
@@ -61,38 +63,38 @@
                         break;
                     case 'menu-link':
                         $.get('/menu.json', mainFunctions.createMenu.bind(pageId));
-                        $('.menu-page').addClass('active-page-link');
-                        $('#all-menu').addClass('active-page-link');
+                        $(menuPage).addClass('active-page-link');
+                        $(allMenuId).addClass('active-page-link');
                         locationObj = '#menu';
                         break;
                     case 'dishes':
                         $.get('/menu.json', mainFunctions.createMenu.bind(pageId));
-                        $('.menu-page').addClass('active-page-link');
-                        $('#all-menu').addClass('active-page-link');
+                        $(menuPage).addClass('active-page-link');
+                        $(allMenuId).addClass('active-page-link');
                         locationObj = '#menu/dishes';
                         break;
                     case 'soups':
                         $.get('/menu.json', mainFunctions.createMenu.bind(pageId));
-                        $('.menu-page').addClass('active-page-link');
-                        $('#all-menu').addClass('active-page-link');
+                        $(menuPage).addClass('active-page-link');
+                        $(allMenuId).addClass('active-page-link');
                         locationObj = '#menu/soups';
                         break;
                     case 'salads':
                         $.get('/menu.json', mainFunctions.createMenu.bind(pageId));
-                        $('.menu-page').addClass('active-page-link');
-                        $('#all-menu').addClass('active-page-link');
+                        $(menuPage).addClass('active-page-link');
+                        $(allMenuId).addClass('active-page-link');
                         locationObj = '#menu/salads';
                         break;
                     case 'desserts':
                         $.get('/menu.json', mainFunctions.createMenu.bind(pageId));
-                        $('.menu-page').addClass('active-page-link');
-                        $('#all-menu').addClass('active-page-link');
+                        $(menuPage).addClass('active-page-link');
+                        $(allMenuId).addClass('active-page-link');
                         locationObj = '#menu/desserts';
                         break;
                     case 'beverages':
                         $.get('/menu.json', mainFunctions.createMenu.bind(pageId));
-                        $('.menu-page').addClass('active-page-link');
-                        $('#all-menu').addClass('active-page-link');
+                        $(menuPage).addClass('active-page-link');
+                        $(allMenuId).addClass('active-page-link');
                         locationObj = '#menu/beverages';
                         break;
                     case 'reservation-link':
@@ -102,7 +104,7 @@
                         reservationFunctions.renderReservation();
                         break;
                     case 'gallery-link':
-                        $.get('/menu.json', function(resp) {
+                        $.get('/menu.json', function (resp) {
                             mainFunctions.renderPage(gallery, MyApp.templates.gallery, resp);
                             galleryFunctions.renderModalImg();
                         });
