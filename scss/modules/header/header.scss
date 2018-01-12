@@ -50,7 +50,7 @@
     transition: color .2s;
     cursor: pointer;
 
-    &:hover, &:active {
+    &:hover {
       color: $ANZAC;
     }
   }
@@ -124,7 +124,7 @@
     overflow: hidden;
 
     &::placeholder {
-      color: $ANZAC;
+      color: lighten($ANZAC, 15%);
     }
 
     &:focus {
@@ -151,6 +151,10 @@
   &:focus {
     outline: none;
   }
+}
+
+.active-page-link {
+  color: #dab33e;
 }
 
 

@@ -19,14 +19,12 @@ var menuFunctions = {
 
             switch (optionText) {
                 case 'From Cheap To Expensive':
-                    console.log('From Cheap To Expensive');
                     filterResp.sort(menuFunctions.increaseSort);
                     menu.innerHTML = MyApp.templates.menu({menu: filterResp});
                     $(sortText).text(optionText);
                     menuFunctions.listShow(filterResp);
                     break;
                 case 'From Expensive To Cheap':
-                    console.log('From Expensive To Cheap');
                     filterResp.sort(menuFunctions.decreaseSort);
                     menu.innerHTML = MyApp.templates.menu({menu: filterResp});
                     $(sortText).text(optionText);

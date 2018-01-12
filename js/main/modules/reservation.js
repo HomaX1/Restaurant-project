@@ -121,7 +121,6 @@ var reservationFunctions = {
             }
 
             if ($(formInput).val() !== '' && $(tableNumberInput).val() !== '' && $('.form-select__text').text() !== 'none') {
-                console.log('валидно');
                 $(successSubmit).fadeIn();
             }
         })
