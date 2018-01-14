@@ -1,0 +1,129 @@
+[
+  {
+    "tablesNumber": 1,
+    "booking": [
+      {
+        "timeFrom": 4,
+        "timeTo": 7
+      }
+    ]
+  },
+  {
+    "tablesNumber": 2,
+    "booking": []
+  },
+  {
+    "tablesNumber": 3,
+    "booking": [
+      {
+        "timeFrom": 4,
+        "timeTo": 5
+      },
+      {
+        "timeFrom": 7,
+        "timeTo": 9
+      }
+    ]
+  },
+  {
+    "tablesNumber": 4,
+    "booking": false
+  },
+  {
+    "tablesNumber": 10,
+    "booking": false
+  },
+  {
+    "tablesNumber": 20,
+    "booking": [
+      {
+        "timeFrom": 5,
+        "timeTo": 7
+      }
+    ]
+  },
+  {
+    "tablesNumber": 30,
+    "booking": false
+  },
+  {
+    "tablesNumber": 40,
+    "booking": false
+  },
+  {
+    "tablesNumber": 50,
+    "booking": [
+      {
+        "timeFrom": 5,
+        "timeTo": 6
+      },
+      {
+        "timeFrom": 9,
+        "timeTo": 11
+      }
+    ]
+  },
+  {
+    "tablesNumber": 60,
+    "booking": false
+  },
+  {
+    "tablesNumber": 70,
+    "booking": false
+  },
+  {
+    "tablesNumber": 80,
+    "booking": []
+  },
+  {
+    "tablesNumber": 11,
+    "booking": false
+  },
+  {
+    "tablesNumber": 12,
+    "booking": [
+      {
+        "timeFrom": 6,
+        "timeTo": 9
+      }
+    ]
+  },
+  {
+    "tablesNumber": 13,
+    "booking": false
+  },
+  {
+    "tablesNumber": 21,
+    "booking": [
+      {
+        "timeFrom": 7,
+        "timeTo": 8
+      }
+    ]
+  },
+  {
+    "tablesNumber": 22,
+    "booking": false
+  },
+  {
+    "tablesNumber": 23,
+    "booking": []
+  },
+  {
+    "tablesNumber": 31,
+    "booking": false
+  },
+  {
+    "tablesNumber": 32,
+    "booking": false
+  },
+  {
+    "tablesNumber": 33,
+    "booking": [
+      {
+        "timeFrom": 7,
+        "timeTo": 10
+      }
+    ]
+  }
+]

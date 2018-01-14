@@ -101,8 +101,8 @@
 }
 
 #table7 {
-   top: 65px;
-   left: 330px;
+  top: 65px;
+  left: 330px;
 }
 
 #table8 {
@@ -335,6 +335,21 @@
 
 #valid-table-number {
   top: 300px;
+}
+
+.booked-table {
+  background-color: rgba(0, 0, 0, .5);
+  cursor: default;
+}
+
+.disabled-time {
+  text-decoration: line-through;
+  background-color: rgba(0, 0, 0, .5);
+  cursor: default;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .5);
+  }
 }
 
 
