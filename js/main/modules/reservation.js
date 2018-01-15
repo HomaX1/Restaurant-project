@@ -66,7 +66,7 @@ var reservationFunctions = {
                 $(tableNumberInput).val(dataIdNum);
             }
 
-            if ($(e.target).attr('data-times').length > 0) {
+            if (e.target.tagName !== "IMG" && $(e.target).attr('data-times').length > 0) {
                 var timesArray = JSON.parse($(e.target).attr('data-times'));
 
                 $('.form-select-list__item').removeClass('disabled-time');
@@ -96,32 +96,7 @@ var reservationFunctions = {
 
                     });
                 });
-
-
-                /*timesArray.forEach(function (timesArrayElem) {
-                    console.log(timesArrayElem);
-
-                    for (var i = timesArrayElem.timeFrom; i <= timesArrayElem.timeTo; i++) {
-                        fromArray.push(i);
-                        toArray.push(i);
-
-                    }
-
-                });
-
-                console.log(fromArray, 'fromArray');
-                console.log(toArray, 'toArray');*/
-
-                /*$(timesArray).each(function (index, timesArrayItem) {
-                    console.log(timesArrayItem);
-
-                     if(timesArrayItem) {
-
-                     }
-                })*/
             }
-
-
         });
     },
     validation: function () {
@@ -164,27 +139,11 @@ var reservationFunctions = {
         $.get('/tables.json', function (response) {
 
             $(tablesItem).each(function (index, tableItem) {
-
-
                 var bookedTables = response.filter(function (item) {
                     return item.tablesNumber === +$(tableItem).attr('data-id');
                 });
 
                 if (bookedTables[0].booking !== false && bookedTables[0].booking.length !== 0) {
-
-                    /*bookedTables[0].booking.forEach(function (bookingElem) {
-
-                        for (var i = bookingElem.timeFrom; i <= bookingElem.timeTo; i++) {
-                            fromArray.push(i);
-                            toArray.push(i);
-                        }
-                        console.log(fromArray, 'fromArray');
-                        console.log(toArray, 'toArray');
-                    });
-                    fromArray.pop();
-                    toArray.shift();*/
-
-
                     $(tableItem).attr('data-times', JSON.stringify(bookedTables[0].booking));
                 } else {
                     $(tableItem).addClass('booked-table');
