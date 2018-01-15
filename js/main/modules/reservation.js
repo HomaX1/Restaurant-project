@@ -1,16 +1,19 @@
-var schemeTables = '.scheme-tables',
-    tableNumberInput = '#table-number',
+var tableNumberInput = '#table-number',
     formSelect = '.form-select',
+    selectFrom = '.form-select-from',
+    selectTo = '.form-select-to',
     formSelectList = '.form-select-list',
     formSelectListFrom = '.form-select-list-from',
     formSelectListTo = '.form-select-list-to',
-    formButton = '.form-reservation__button',
     validName = '#valid-name',
     validPhone = '#valid-phone',
     validTableNumber = '#valid-table-number',
     formInput = '.form-reservation__input',
     successSubmit = '.form-reservation__text',
-    tablesItem = '.scheme-tables__item';
+    selectTextFrom = '.form-select__text-from',
+    selectTextTo = '.form-select__text-to',
+    firstName = '#first-name',
+    phoneNumber = '#phone-number';
 
 var reservationFunctions = {
     showFormList: function () {
@@ -37,26 +40,26 @@ var reservationFunctions = {
         $(formSelectList).click(function (e) {
             var optionValue = '';
 
-            if(!$('.form-select-list li').hasClass('disabled-time')) {
+            if (!$(e.target).hasClass('disabled-time')) {
                 if ($(e.target.parentElement).hasClass('form-select-list-from')) {
                     $(successSubmit).hide();
                     $(formSelectList).fadeOut();
                     optionValue = e.target.innerText;
-                    $('.form-select__text-from').text(optionValue);
-                    $('.form-select-from').removeClass('border');
+                    $(selectTextFrom).text(optionValue);
+                    $(selectFrom).removeClass('border');
                 } else {
                     $(successSubmit).hide();
                     $(formSelectList).fadeOut();
                     optionValue = e.target.innerText;
-                    $('.form-select__text-to').text(optionValue);
-                    $('.form-select-to').removeClass('border');
+                    $(selectTextTo).text(optionValue);
+                    $(selectTo).removeClass('border');
                 }
             }
 
         });
     },
     numberTransfer: function () {
-        $(schemeTables).on('click', function (e) {
+        $('.scheme-tables').on('click', function (e) {
             $(successSubmit).hide();
             $(validTableNumber).hide();
             $(tableNumberInput).removeClass('border');
@@ -71,25 +74,25 @@ var reservationFunctions = {
 
                 $('.form-select-list__item').removeClass('disabled-time');
 
-                $('.form-select-list-from li').each(function(index, item) {
+                $('.form-select-list-from li').each(function (index, item) {
                     var itemFrom = parseInt($(item).text());
 
                     timesArray.forEach(function (timesArrayElem) {
-                            for (var i = timesArrayElem.timeFrom; i < timesArrayElem.timeTo; i++) {
-                                if(itemFrom === i) {
-                                    $(item).addClass('disabled-time');
-                                }
+                        for (var i = timesArrayElem.timeFrom; i < timesArrayElem.timeTo; i++) {
+                            if (itemFrom === i) {
+                                $(item).addClass('disabled-time');
                             }
+                        }
                     });
                 });
 
-                $('.form-select-list-to li').each(function(index, item) {
+                $('.form-select-list-to li').each(function (index, item) {
                     var itemTo = parseInt($(item).text());
 
                     timesArray.forEach(function (timesArrayElem) {
 
                         for (var i = timesArrayElem.timeFrom + 1; i <= timesArrayElem.timeTo; i++) {
-                            if(itemTo === i) {
+                            if (itemTo === i) {
                                 $(item).addClass('disabled-time');
                             }
                         }
@@ -138,9 +141,9 @@ var reservationFunctions = {
     getBookedTables: function () {
         $.get('/tables.json', function (response) {
 
-            $(tablesItem).each(function (index, tableItem) {
+            $('.scheme-tables__item').each(function (index, tableItem) {
                 var bookedTables = response.filter(function (item) {
-                    return item.tablesNumber === +$(tableItem).attr('data-id');
+                    return item.tableNumber === +$(tableItem).attr('data-id');
                 });
 
                 if (bookedTables[0].booking !== false && bookedTables[0].booking.length !== 0) {
@@ -152,15 +155,15 @@ var reservationFunctions = {
         });
     },
     sendData: function () {
-        $(formButton).on('click', function (e) {
+        $('.form-reservation__button').on('click', function (e) {
             e.preventDefault();
 
-            if ($('#first-name').val() === '') {
-                $(formInput).addClass('border');
+            if ($(firstName).val() === '') {
+                $(firstName).addClass('border');
                 $(validName).text('Please, enter your name!').show();
             }
-            if ($('#phone-number').val() === '') {
-                $(formInput).addClass('border');
+            if ($(phoneNumber).val() === '') {
+                $(phoneNumber).addClass('border');
                 $(validPhone).text('Please, enter your phone number!').show();
             }
             if ($(tableNumberInput).val() === '') {
@@ -168,12 +171,24 @@ var reservationFunctions = {
                 $(validTableNumber).text('Click on the table you want to book on the picture!').show();
                 reservationFunctions.numberTransfer();
             }
-            if ($('.form-select__text-from').text() === 'none' || $('.form-select__text-to').text() === 'none') {
-                $(formSelect).addClass('border');
+            if ($(selectTextFrom).text() === 'none') {
+                $(selectFrom).addClass('border');
             }
-
-            if ($(formInput).val() !== '' && $(tableNumberInput).val() !== '' && $('.form-select__text').text() !== 'none') {
+            if ($(selectTextTo).text() === 'none') {
+                $(selectTo).addClass('border');
+            }
+            if ($(formInput).val() !== '' && $(tableNumberInput).val() !== '' && $(selectTextFrom).text() !== 'none' && $(selectTextTo).text() !== 'none') {
                 $(successSubmit).fadeIn();
+
+                var successReservation = {
+                    firstName: $(firstName).val(),
+                    phoneNumber: $(phoneNumber).val(),
+                    tableNumber: $(tableNumberInput).val(),
+                    timeFrom: $(selectTextFrom).text(),
+                    timeTo: $(selectTextTo).text()
+                };
+
+                console.log(successReservation);
             }
         })
     },

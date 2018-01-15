@@ -1,6 +1,6 @@
 [
   {
-    "tablesNumber": 1,
+    "tableNumber": 1,
     "booking": [
       {
         "timeFrom": 4,
@@ -9,11 +9,11 @@
     ]
   },
   {
-    "tablesNumber": 2,
+    "tableNumber": 2,
     "booking": []
   },
   {
-    "tablesNumber": 3,
+    "tableNumber": 3,
     "booking": [
       {
         "timeFrom": 4,
@@ -26,15 +26,15 @@
     ]
   },
   {
-    "tablesNumber": 4,
+    "tableNumber": 4,
     "booking": false
   },
   {
-    "tablesNumber": 10,
+    "tableNumber": 10,
     "booking": false
   },
   {
-    "tablesNumber": 20,
+    "tableNumber": 20,
     "booking": [
       {
         "timeFrom": 5,
@@ -43,15 +43,15 @@
     ]
   },
   {
-    "tablesNumber": 30,
+    "tableNumber": 30,
     "booking": false
   },
   {
-    "tablesNumber": 40,
+    "tableNumber": 40,
     "booking": false
   },
   {
-    "tablesNumber": 50,
+    "tableNumber": 50,
     "booking": [
       {
         "timeFrom": 5,
@@ -64,23 +64,23 @@
     ]
   },
   {
-    "tablesNumber": 60,
+    "tableNumber": 60,
     "booking": false
   },
   {
-    "tablesNumber": 70,
+    "tableNumber": 70,
     "booking": false
   },
   {
-    "tablesNumber": 80,
+    "tableNumber": 80,
     "booking": []
   },
   {
-    "tablesNumber": 11,
+    "tableNumber": 11,
     "booking": false
   },
   {
-    "tablesNumber": 12,
+    "tableNumber": 12,
     "booking": [
       {
         "timeFrom": 6,
@@ -89,11 +89,11 @@
     ]
   },
   {
-    "tablesNumber": 13,
+    "tableNumber": 13,
     "booking": false
   },
   {
-    "tablesNumber": 21,
+    "tableNumber": 21,
     "booking": [
       {
         "timeFrom": 7,
@@ -102,23 +102,23 @@
     ]
   },
   {
-    "tablesNumber": 22,
+    "tableNumber": 22,
     "booking": false
   },
   {
-    "tablesNumber": 23,
+    "tableNumber": 23,
     "booking": []
   },
   {
-    "tablesNumber": 31,
+    "tableNumber": 31,
     "booking": false
   },
   {
-    "tablesNumber": 32,
+    "tableNumber": 32,
     "booking": false
   },
   {
-    "tablesNumber": 33,
+    "tableNumber": 33,
     "booking": [
       {
         "timeFrom": 7,
