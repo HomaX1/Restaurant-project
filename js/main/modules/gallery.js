@@ -5,7 +5,7 @@ var galleryFunctions = {
         $('.gallery-products').on('click', function(e) {
             if(e.target.parentElement.className === 'gallery-product') {
                 $(modalWrap).css('display', 'flex');
-                $('.modal-product__img').attr('src', e.target.currentSrc);
+                $('.modal-product__img').attr('src', e.target.currentSrc || e.target.src);
             }
         })
     },

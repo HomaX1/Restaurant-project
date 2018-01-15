@@ -15,16 +15,16 @@ var menuFunctions = {
         $(sortList).click(function (e) {
             $(sortList).fadeOut();
 
-            var optionText = e.target.innerText;
+            var optionText = $(e.target).text();
 
             switch (optionText) {
-                case 'From Cheap To Expensive':
+                case 'from cheap to expensive':
                     filterResp.sort(menuFunctions.increaseSort);
                     menu.innerHTML = MyApp.templates.menu({menu: filterResp});
                     $(sortText).text(optionText);
                     menuFunctions.listShow(filterResp);
                     break;
-                case 'From Expensive To Cheap':
+                case 'from expensive to cheap':
                     filterResp.sort(menuFunctions.decreaseSort);
                     menu.innerHTML = MyApp.templates.menu({menu: filterResp});
                     $(sortText).text(optionText);
